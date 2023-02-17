@@ -28,10 +28,9 @@ class AdapterMyModel: RecyclerView.Adapter<AdapterMyModel.ModelHolder>() {
                 itemNameLesson.text = model?.name?.substring(0,25) +"..."
             }else{itemNameLesson.text = model.name}
 
-            if(model.place?.length!!>19){
-                itemPlace.text = model.place.toString().substring(0,19)+"..."
+            if(model.place?.length!!>17){
+                itemPlace.text = model.place.toString().substring(0,17)+".."
             }else{itemPlace.text = model.place}
-            //search lenght lesson for item
             val formatStartTime = SimpleDateFormat("HH:mm").parse(model.startTime)
             val formatEndTime = SimpleDateFormat("HH:mm").parse(model.endTime)
             var dif = formatEndTime.time - formatStartTime.time
@@ -58,11 +57,9 @@ class AdapterMyModel: RecyclerView.Adapter<AdapterMyModel.ModelHolder>() {
             }
             itemView.setOnClickListener{
                 System.out.println(model.name.toString())
-                //var dataModelItemOnTouchFragment = DataModelItemOnTouchFragment()
                 var bundle: Bundle = Bundle()
                 bundle.putSerializable("modelItem",model)
                 bundle.putSerializable("trainersItem",trainers)
-                //val action = FragmentD
                 itemView.findNavController().navigate(R.id.itemOnTouchFragment,bundle)
             }
             constrForColorBackLeftLine.setBackgroundColor(Color.parseColor(model.color))

@@ -18,9 +18,9 @@ class AdapterForSections: RecyclerView.Adapter<AdapterForSections.ModelHolder>()
     class ModelHolder(item: View):RecyclerView.ViewHolder(item) {
         val binding = ItemsOneSectionBinding.bind(item)
         fun bind(date: Calendar, lessons:ArrayList<Lesson>, trainers: ArrayList<Trainer>)= with(binding){
-            var strDayOfWeek = date.getDisplayName(Calendar.DAY_OF_WEEK,Calendar.LONG_FORMAT, Locale("ru")).toString()
-            var strIntDay = date.get(Calendar.DAY_OF_MONTH).toString()
-            var strNameMonth = date.getDisplayName(Calendar.MONTH,Calendar.LONG_FORMAT,Locale("ru"))
+            val strDayOfWeek = date.getDisplayName(Calendar.DAY_OF_WEEK,Calendar.LONG_FORMAT, Locale("ru")).toString()
+            val strIntDay = date.get(Calendar.DAY_OF_MONTH).toString()
+            val strNameMonth = date.getDisplayName(Calendar.MONTH,Calendar.LONG_FORMAT,Locale("ru"))
             binding.seictionTextDate.text = strDayOfWeek+", "+strIntDay+" "+strNameMonth
             val adapterMyModel = AdapterMyModel()
             adapterMyModel.addAll(lessons,trainers)

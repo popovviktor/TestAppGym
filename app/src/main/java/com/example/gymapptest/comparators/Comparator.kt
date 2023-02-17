@@ -16,20 +16,20 @@ class CustomComparator : Comparator<Lesson> {
         return getData(x).compareTo(getData(y))
     }
     fun getData(lesson: Lesson): Calendar {
-        var simpledateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).parse(lesson.date)
-        var calendar = GregorianCalendar()
+        val simpledateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).parse(lesson.date)
+        val calendar = GregorianCalendar()
         calendar.time = simpledateFormat
         return calendar
     }
     fun getStartTime(lesson: Lesson): Calendar {
-        var simpledateFormat = SimpleDateFormat("HH:mm", Locale.ENGLISH).parse(lesson.startTime)
-        var calendar = GregorianCalendar()
+        val simpledateFormat = SimpleDateFormat("HH:mm", Locale.ENGLISH).parse(lesson.startTime)
+        val calendar = GregorianCalendar()
         calendar.time = simpledateFormat
         return calendar
     }
     fun getEndTime(lesson: Lesson): Calendar {
-        var simpledateFormat = SimpleDateFormat("HH:mm", Locale.ENGLISH).parse(lesson.endTime)
-        var calendar = GregorianCalendar()
+        val simpledateFormat = SimpleDateFormat("HH:mm", Locale.ENGLISH).parse(lesson.endTime)
+        val calendar = GregorianCalendar()
         calendar.time = simpledateFormat
         return calendar
     }

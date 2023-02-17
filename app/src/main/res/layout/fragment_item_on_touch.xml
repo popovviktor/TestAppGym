@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.screens.onTouchItem.ItemOnTouchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/itemTouchNameLesson"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:background="#F7F7F7"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#151111"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/itemOntouchDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemTouchNameLesson" />
+
+        <TextView
+            android:id="@+id/titleStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Начало тренировки:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemOntouchDate" />
+
+        <TextView
+            android:id="@+id/titleEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Окончание тренировки:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleStartTime" />
+
+        <TextView
+            android:id="@+id/titleDescriptuon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Описание:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTrainerName" />
+
+        <TextView
+            android:id="@+id/titleTrainerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Тренер:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleEndTime" />
+
+        <TextView
+            android:id="@+id/itemDesription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleDescriptuon" />
+
+        <TextView
+            android:id="@+id/titleAvailslots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Доступно мест:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemDesription" />
+
+        <TextView
+            android:id="@+id/titlePlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Место проведения:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleAvailslots" />
+
+        <Button
+            android:id="@+id/btnRequrstToAddLesson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Записаться"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titlePlace" />
+
+        <TextView
+            android:id="@+id/itemTouchStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/titleStartTime"
+            app:layout_constraintTop_toTopOf="@+id/titleStartTime" />
+
+        <TextView
+            android:id="@+id/itemTouchEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/titleEndTime"
+            app:layout_constraintTop_toTopOf="@+id/titleEndTime" />
+
+        <TextView
+            android:id="@+id/itemTouchNameTrainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/titleTrainerName"
+            app:layout_constraintTop_toTopOf="@+id/titleTrainerName" />
+
+        <TextView
+            android:id="@+id/itemTouchAvailSlots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/titleAvailslots"
+            app:layout_constraintTop_toTopOf="@+id/titleAvailslots" />
+
+        <TextView
+            android:id="@+id/itemTouchPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/titlePlace"
+            app:layout_constraintTop_toTopOf="@+id/titlePlace" />
+
+        <Button
+            android:id="@+id/btnbackToLEssons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="расписание"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="@+id/btnRequrstToAddLesson"
+            app:layout_constraintHorizontal_bias="0.479"
+            app:layout_constraintStart_toStartOf="@+id/btnRequrstToAddLesson"
+            app:layout_constraintTop_toBottomOf="@+id/btnRequrstToAddLesson" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

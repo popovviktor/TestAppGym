@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bottom_nav_lessons">
+
+    <fragment
+        android:id="@+id/bottom_nav_lessons"
+        android:name="com.example.gymapptest.presentation.screens.MainLessonsFragment"
+        android:label="fragment_main_lessons"
+        tools:layout="@layout/fragment_main_lessons" >
+        <action
+            android:id="@+id/action_bottom_nav_lessons_to_itemOnTouchFragment"
+            app:destination="@id/itemOnTouchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottom_nav_requests"
+        android:name="com.example.gymapptest.presentation.screens.RequestsFragment"
+        android:label="fragment_requests"
+        tools:layout="@layout/fragment_requests" />
+    <fragment
+        android:id="@+id/bottom_nav_add"
+        android:name="com.example.gymapptest.presentation.screens.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/bottom_nav_chat"
+        android:name="com.example.gymapptest.presentation.screens.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/bottom_nav_more"
+        android:name="com.example.gymapptest.presentation.screens.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+    <fragment
+        android:id="@+id/itemOnTouchFragment"
+        android:name="com.example.gymapptest.presentation.screens.onTouchItem.ItemOnTouchFragment"
+        android:label="fragment_item_on_touch"
+        tools:layout="@layout/fragment_item_on_touch" >
+        <argument
+            android:name="Lesson"
+            app:argType="com.example.gymapptest.data.api.model.Lesson" />
+    </fragment>
+</navigation>
